@@ -1,28 +1,20 @@
 class Solution {
     public int addDigits(int num) {
-        int sum =0;
-        int d;
-        
-        while(num > 0){
-            d = num%10;
-            sum = sum+d;
-            num = num/10;
-        }
-        
-        
-        
-        
-        while(sum >= 10 ){
-            int a =0;
+       if( num <10){
+        return num;
+       }
 
-            while(sum>0){
-                d = sum%10;
-                a =a+d;
-                sum = sum/10;
-            }
-            sum =  a;
-        }
-        return sum;
+       while(num >= 10){
+        int sum = 0;
+        int val = num;
 
+        while(val !=0){
+            int rem = val%10;
+            sum +=rem;
+            val/=10;
+        }
+        num =sum;
+       }
+       return num;
     }
 }
