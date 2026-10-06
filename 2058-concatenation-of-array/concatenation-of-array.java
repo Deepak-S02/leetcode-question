@@ -4,12 +4,9 @@ class Solution {
         int[] c = new int[(n)*2];
          for(int i =0; i<n;i++){
             c[i] = nums[i];
-         } 
-        for(int i =0 ; i<n;i++){
-            c[n+i] = nums[i];
+            c[i+n] = nums[i];
          }
-         return c;
-        
+        return c; 
         
     }
 }
